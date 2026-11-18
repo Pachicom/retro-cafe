@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Зерно & Корица — Винтажное кафе</title>
-  
-  <!-- Винтажные шрифты из Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rokkitt:wght@600;800&display=swap" rel="stylesheet">
-
+  
   <style>
     :root {
       --bg-main: #fdf6e3;
@@ -105,6 +103,17 @@
     .btn--primary:hover {
       background-color: var(--bg-dark);
       border-color: var(--bg-dark);
+    }
+
+    .btn--secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .btn--secondary:hover {
+      background: #fff;
+      color: var(--bg-dark);
     }
 
     .btn--outline {
@@ -208,17 +217,6 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
-    }
-
-    .btn--secondary {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      border: 2px solid #fff;
-    }
-
-    .btn--secondary:hover {
-      background: #fff;
-      color: var(--bg-dark);
     }
 
     /* О нас */
@@ -351,7 +349,7 @@
       padding: 4px 12px;
       text-transform: uppercase;
       transform: rotate(3deg);
-      box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
     }
 
     .menu-card__body {
@@ -407,7 +405,7 @@
       color: var(--text-muted);
     }
 
-    /* Галерея */
+    /* Галерея (Полароид) */
     .gallery__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -421,7 +419,7 @@
       padding: 8px 8px 30px 8px;
       background: #fff;
       border: 2px solid var(--border);
-      box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+      box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
       cursor: zoom-in;
       transition: transform 0.3s ease;
     }
@@ -572,9 +570,9 @@
     <div class="container about__grid">
       <div class="about__text">
         <h2>Атмосфера прошлого века</h2>
-        <p>Мы воссоздали дух классических американских кофеен: тёплый свет, винтажная мебель, пластинки на стене и рецепты выпечки, проверенные временем.</p>
+        <p>Мы воссоздали дух классических кофеен середины века: тёплый свет, винтажная мебель, пластинки на стене и рецепты выпечки, проверенные временем.</p>
         <ul class="about__features">
-          <li><strong>Зерна ручной обжарки</strong> — только отборная арабика высшего сорта.</li>
+          <li><strong>Зёрна ручной обжарки</strong> — только отборная арабика высшего сорта.</li>
           <li><strong>Собственная пекарня</strong> — выпекаем круассаны каждые три часа.</li>
           <li><strong>Живая музыка</strong> — по вечерам играем джаз и блюз на виниле.</li>
         </ul>
@@ -585,12 +583,12 @@
     </div>
   </section>
 
-  <!-- Меню (Динамическое из JSON) -->
+  <!-- Меню -->
   <section id="menu" class="section menu">
     <div class="container">
       <div class="section__header">
         <h2>Наше меню</h2>
-        <p>Цены и позиции подгружаются из JSON-файла для удобного обновления</p>
+        <p>Позиции и цены легко редактируются в JSON-блоке прямо в коде страницы</p>
       </div>
 
       <div class="menu__controls">
@@ -598,9 +596,7 @@
         <input type="search" id="menu-search" class="menu__search" placeholder="Поиск по меню...">
       </div>
 
-      <div id="menu-grid" class="menu__grid">
-        <!-- Сюда подгружаются карточки через JS -->
-      </div>
+      <div id="menu-grid" class="menu__grid"></div>
     </div>
   </section>
 
@@ -612,10 +608,10 @@
         <p>Нажмите на фотографию, чтобы рассмотреть детали</p>
       </div>
       <div class="gallery__grid">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Кофе" class="gallery__item">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Лате-арт" class="gallery__item">
-        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=700&q=80" alt="Зал" class="gallery__item">
-        <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=700&q=80" alt="Выпечка" class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Приготовление кофе" class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Латте-арт" class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=700&q=80" alt="Уютный зал" class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=700&q=80" alt="Свежая выпечка" class="gallery__item">
       </div>
     </div>
   </section>
@@ -627,7 +623,7 @@
         <h2>Контакты</h2>
         <div class="contacts__block">
           <h3>Адрес</h3>
-          <p>ул. Винтажная, 15 (угол ул. Дзетты)</p>
+          <p>пр. Бухар-Жырау, 42 (вход со стороны сквера)</p>
         </div>
         <div class="contacts__block">
           <h3>Время работы</h3>
@@ -662,41 +658,87 @@
   <!-- Лайтбокс -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <button id="lightbox-close" class="lightbox__close" aria-label="Закрыть">&times;</button>
-    <img id="lightbox-img" src="" alt="Фото">
+    <img id="lightbox-img" src="" alt="Увеличенное фото">
   </div>
 
-  <!-- JavaScript загрузки JSON -->
+  <!-- Встроенный JSON-датасет и логика -->
   <script>
+    // Встроенный JSON-файл меню (можно легко править цены, описания и добавлять новые пункты здесь)
+    const menuData = {
+      "currency": "₸",
+      "items": [
+        {
+          "id": 1,
+          "category": "Кофе",
+          "name": "Флэт Уайт",
+          "description": "Двойной эспрессо на зерне Эфиопия Иргачефф с бархатистой молочной пенкой.",
+          "price": 1400,
+          "weight": "250 мл",
+          "badge": "Хит",
+          "image": "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "id": 2,
+          "category": "Кофе",
+          "name": "Раф Солёная Карамель",
+          "description": "Сливочный кофейный напиток на основе эспрессо, сливок 10% и домашней карамели с морской солью.",
+          "price": 1750,
+          "weight": "350 мл",
+          "badge": "",
+          "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "id": 3,
+          "category": "Выпечка",
+          "name": "Миндальный круассан",
+          "description": "Слоёное тесто на сливочном масле с миндальным кремом франжипан и лепестками миндаля.",
+          "price": 1300,
+          "weight": "140 г",
+          "badge": "Свежая выпечка",
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "id": 4,
+          "category": "Завтраки",
+          "name": "Сырники из фермерского творога",
+          "description": "Подаются со сметаной, ягодным конфитюром и свежей мятой.",
+          "price": 2100,
+          "weight": "240 г",
+          "badge": "До 14:00",
+          "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "id": 5,
+          "category": "Десерты",
+          "name": "Чизкейк Сан-Себастьян",
+          "description": "Нежный обожжённый баскский чизкейк с карамельной корочкой и кремовой серединой.",
+          "price": 1900,
+          "weight": "160 г",
+          "badge": "Выбор шефа",
+          "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "id": 6,
+          "category": "Авторские чаи",
+          "name": "Облепиха и Имбирь",
+          "description": "Согревающий настой из протёртой облепихи, корня имбиря, апельсина и цветочного мёда.",
+          "price": 1600,
+          "weight": "500 мл",
+          "badge": "",
+          "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    };
+
     document.addEventListener('DOMContentLoaded', () => {
       const menuGrid = document.getElementById('menu-grid');
       const filtersContainer = document.getElementById('menu-filters');
       const searchInput = document.getElementById('menu-search');
 
-      let menuItems = [];
-      let currency = '₸';
+      let menuItems = menuData.items || [];
+      let currency = menuData.currency || '₸';
       let activeCategory = 'Все';
       let searchQuery = '';
-
-      async function loadMenu() {
-        try {
-          const response = await fetch(`data/menu.json?v=${Date.now()}`);
-          if (!response.ok) throw new Error('Файл menu.json не найден');
-
-          const data = await response.json();
-          menuItems = data.items || [];
-          currency = data.currency || '₸';
-
-          renderCategoryButtons();
-          renderMenu();
-        } catch (error) {
-          console.error(error);
-          menuGrid.innerHTML = `
-            <div class="menu__status">
-              Не удалось загрузить меню из файла data/menu.json. Убедитесь, что папка data лежит рядом с html-файлом, и вы используете локальный сервер (например, Live Server в VS Code).
-            </div>
-          `;
-        }
-      }
 
       function renderCategoryButtons() {
         const categories = ['Все', ...new Set(menuItems.map(item => item.category))];
@@ -753,7 +795,6 @@
         renderMenu();
       });
 
-      // Лайтбокс логика
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxClose = document.getElementById('lightbox-close');
@@ -770,7 +811,9 @@
         if (e.target === lightbox) lightbox.classList.remove('open');
       });
 
-      loadMenu();
+      // Инициализация
+      renderCategoryButtons();
+      renderMenu();
     });
   </script>
 </body>
